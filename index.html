@@ -5,164 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Patel | AI & ML Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Gaming / Sci-Fi Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-gaming { font-family: 'Orbitron', sans-serif; }
+        .font-body-gaming { font-family: 'Rajdhani', sans-serif; }
+        .neon-glow-red {
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+        }
+        .neon-glow-red-hover:hover {
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.7);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased">
+<body class="bg-black text-gray-100 font-body-gaming text-lg tracking-wide antialiased">
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 w-full bg-gray-950/80 backdrop-blur-md z-50 border-b border-gray-800">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">Deep Patel</a>
-            <div class="space-x-6 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#education" class="hover:text-white transition">Education</a>
-                <a href="#skills" class="hover:text-white transition">Skills</a>
-                <a href="#projects" class="hover:text-white transition">Projects Workspace</a>
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-red-900/40">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-gaming text-xl font-black tracking-widest text-white">
+                PORT<span class="text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">FOLIO</span>
+            </a>
+            <div class="space-x-8 text-md font-semibold tracking-wider text-gray-400">
+                <a href="#about" class="hover:text-red-500 hover:drop-shadow-[0_0_5px_rgba(239,68,68,0.5)] transition duration-300">Home</a>
+                <a href="#education" class="hover:text-red-500 hover:drop-shadow-[0_0_5px_rgba(239,68,68,0.5)] transition duration-300">Education</a>
+                <a href="#skills" class="hover:text-red-500 hover:drop-shadow-[0_0_5px_rgba(239,68,68,0.5)] transition duration-300">Skills</a>
+                <a href="#projects" class="hover:text-red-500 hover:drop-shadow-[0_0_5px_rgba(239,68,68,0.5)] transition duration-300">Projects</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero / Profile Section -->
-    <section id="about" class="min-h-screen flex items-center justify-center pt-24 px-6">
-        <div class="max-w-3xl text-center space-y-6">
-            <span class="text-xs font-semibold uppercase tracking-widest px-3 py-1 bg-blue-900/40 text-blue-400 rounded-full border border-blue-800/60">
-                Available for Student Positions / Internships / Master Thesis
-            </span>
-            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">
-                Hi, I'm <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Deep Patel</span>
+    <!-- Hero / Main Graphic Section -->
+    <section id="about" class="min-h-screen flex items-center justify-center pt-24 px-6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Text Intel -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+            <h1 class="font-gaming text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white leading-tight tracking-tighter">
+                CODE THE FUTURE <br>WITH <span class="text-red-500 drop-shadow-[0_0_12px_rgba(239,68,68,0.6)]">NEON AI</span>
             </h1>
-            <p class="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            <h2 class="font-gaming text-xl md:text-2xl font-bold tracking-widest text-gray-400 uppercase">
+                AI / ML Developer & Computer Scientist
+            </h2>
+            <p class="text-gray-400 leading-relaxed text-base md:text-lg max-w-xl font-medium">
                 Computer Science graduate currently pursuing a Master's in Artificial Intelligence at BTU Cottbus (4th Semester). 
-                Hands-on experience writing clean Python code for data processing, text analysis, and standard machine learning algorithms.
+                I create immersive algorithmic workflows, balancing deep math engineering with rapid deployment frameworks to turn complex models into seamless reality.
             </p>
-            <p class="text-sm text-gray-400">
-                📍 Hamburg / Cottbus, Germany &nbsp;|&nbsp; 📧 dp1852001@gmail.com &nbsp;|&nbsp; 📱 +49 155 6027 5161
-            </p>
-            <div class="flex justify-center gap-4 pt-4">
-                <a href="#projects" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 font-medium rounded-lg transition shadow-lg shadow-blue-900/40 text-sm">
-                    Open Projects Workspace
+            <div class="text-sm font-semibold text-gray-500 font-gaming space-y-1">
+                <p>📍 Hamburg / Cottbus, Germany</p>
+                <p>📧 dp1852001@gmail.com &nbsp;&nbsp; 📱 +49 155 6027 5161</p>
+            </div>
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="#projects" class="font-gaming px-6 py-3 border border-red-500 text-red-500 bg-red-950/20 text-sm font-bold tracking-widest rounded-md transition duration-300 neon-glow-red neon-glow-red-hover uppercase">
+                    🚀 View Projects
                 </a>
-                <a href="https://github.com/painx9" target="_blank" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 font-medium rounded-lg transition border border-gray-700 text-sm">
-                    GitHub Profile
+                <a href="https://github.com/painx9" target="_blank" class="font-gaming px-6 py-3 border border-gray-800 text-gray-400 bg-gray-900/40 text-sm font-bold tracking-widest rounded-md transition duration-300 hover:text-white hover:border-gray-600 uppercase">
+                    📂 GitHub Profile
                 </a>
+            </div>
+        </div>
+        
+        <!-- Glowing Image Container -->
+        <div class="lg:col-span-5 flex justify-center items-center">
+            <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] border-2 border-red-500 bg-red-950/30 overflow-hidden flex justify-center items-center neon-glow-red">
+                <!-- Fallback Icon Avatar / Placeholder for Profile Picture -->
+                <div class="text-center p-8">
+                    <span class="font-gaming text-5xl md:text-7xl font-black text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.8)]">🧠</span>
+                    <p class="font-gaming text-xs tracking-widest mt-4 text-white uppercase opacity-70">SYSTEM ENGAGED</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="py-24 bg-gray-950 px-6 border-y border-gray-800/50">
+    <!-- Education Terminal -->
+    <section id="education" class="py-24 bg-zinc-950/60 border-y border-red-950/40 px-6">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-white">Education History</h2>
-            <div class="space-y-12 relative border-l-2 border-gray-800 ml-4 md:ml-6">
+            <h2 class="font-gaming text-3xl font-black mb-12 text-center tracking-widest text-white uppercase">
+                Education <span class="text-red-500">Timeline</span>
+            </h2>
+            <div class="space-y-12 relative border-l-2 border-red-900/40 ml-4 md:ml-6">
                 
                 <!-- Degree 1 -->
-                <div class="relative pl-8">
-                    <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[9px] top-1.5 ring-4 ring-gray-950"></div>
+                <div class="relative pl-8 group">
+                    <div class="absolute w-3 h-3 bg-red-500 rounded-full -left-[7px] top-2 ring-4 ring-black group-hover:scale-125 transition duration-300"></div>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                         <div>
-                            <h3 class="text-xl font-bold text-white">M.Sc. Artificial Intelligence (4th Semester)</h3>
-                            <p class="text-indigo-400 font-medium">BTU Cottbus-Senftenberg, Germany</p>
+                            <h3 class="font-gaming text-lg font-bold text-white uppercase group-hover:text-red-400 transition duration-300">M.Sc. Artificial Intelligence (4th Semester)</h3>
+                            <p class="text-gray-400 font-medium">BTU Cottbus-Senftenberg, Germany</p>
                         </div>
-                        <span class="text-sm text-gray-400 font-mono mt-1 md:mt-0">2024 - Present</span>
+                        <span class="font-gaming text-sm text-red-500 font-bold mt-1 md:mt-0">2024 - PRESENT</span>
                     </div>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        • Focus: Machine Learning foundations, Data Science workflows, and NLP methods.<br>
+                    <p class="text-sm text-gray-400 font-medium leading-relaxed">
+                        • Current Focus: Machine Learning foundations, Data Science workflows, and NLP methods.<br>
                         • Objective: Open to a 6-month industry thesis collaboration or practical student worker placements.
                     </p>
                 </div>
 
                 <!-- Degree 2 -->
-                <div class="relative pl-8">
-                    <div class="absolute w-4 h-4 bg-gray-600 rounded-full -left-[9px] top-1.5 ring-4 ring-gray-950"></div>
+                <div class="relative pl-8 group">
+                    <div class="absolute w-3 h-3 bg-zinc-700 rounded-full -left-[7px] top-2 ring-4 ring-black group-hover:bg-red-500 transition duration-300"></div>
                     <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
                         <div>
-                            <h3 class="text-xl font-bold text-white">B.Tech. Computer Science</h3>
+                            <h3 class="font-gaming text-lg font-bold text-white uppercase">B.Tech. Computer Science</h3>
                             <p class="text-gray-400 font-medium">Parul University, Gujarat, India</p>
                         </div>
-                        <span class="text-sm text-gray-400 font-mono mt-1 md:mt-0">2019 - 2023</span>
+                        <span class="font-gaming text-sm text-gray-500 font-bold mt-1 md:mt-0">2019 - 2023</span>
                     </div>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        • Academic Foundations: Object-Oriented Programming, Basic Data Structures, and SQL Databases.
+                    <p class="text-sm text-gray-400 font-medium leading-relaxed">
+                        • Foundations: Object-Oriented Programming, Basic Data Structures, and SQL Databases.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section id="skills" class="py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold mb-12 text-center text-white">Technical Skills & Toolkit</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-6 bg-gray-950 rounded-xl border border-gray-800">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-blue-400 mb-3">Languages & Syntaxes</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Python, SQL, HTML5, CSS3, JavaScript</p>
-                </div>
-                <div class="p-6 bg-gray-950 rounded-xl border border-gray-800">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-indigo-400 mb-3">Libraries & Frameworks</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Scikit-Learn, XGBoost, NumPy, Pandas, Natural Language Toolkit (NLTK), Seaborn, Matplotlib</p>
-                </div>
-                <div class="p-6 bg-gray-950 rounded-xl border border-gray-800">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-purple-400 mb-3">Tools & IDEs</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">Git, GitLab, Visual Studio Code, PyCharm, Overleaf (LaTeX), Streamlit</p>
-                </div>
-                <div class="p-6 bg-gray-950 rounded-xl border border-gray-800 lg:col-span-3">
-                    <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-3">Core Methodologies</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Train-Test Splits, Baseline Data Preprocessing, Text Tokenization & Stemming, Tf-Idf Matrix Vectorization, Core Machine Learning Lifecycle
-                    </p>
-                </div>
+    <!-- Technical Arsenal (Skills) -->
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="font-gaming text-3xl font-black mb-12 text-center tracking-widest text-white uppercase">
+            Technical <span class="text-red-500">Arsenal</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-900/80 transition duration-300">
+                <h3 class="font-gaming text-xs font-bold uppercase tracking-widest text-red-500 mb-3">Core Languages</h3>
+                <p class="text-gray-300 text-md font-medium">Python, SQL, HTML5, CSS3, JavaScript</p>
             </div>
-            
-            <!-- Language Badges -->
-            <div class="mt-8 p-6 bg-gray-950 rounded-xl border border-gray-800 text-center">
-                <span class="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">Spoken Languages</span>
-                <div class="flex flex-wrap justify-center gap-3 text-xs">
-                    <span class="px-3 py-1.5 bg-gray-900 border border-gray-700 rounded-md">🇬🇧 English: Fluent (C1 / IELTS 7.0)</span>
-                    <span class="px-3 py-1.5 bg-gray-900 border border-gray-700 rounded-md">🇩🇪 German: A2/B1 Active Learner</span>
-                    <span class="px-3 py-1.5 bg-gray-900 border border-gray-700 rounded-md">🇮🇳 Hindi / Gujarati: Native</span>
-                </div>
+            <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-900/80 transition duration-300">
+                <h3 class="font-gaming text-xs font-bold uppercase tracking-widest text-red-500 mb-3">Libraries & Frameworks</h3>
+                <p class="text-gray-300 text-md font-medium">Scikit-Learn, XGBoost, NumPy, Pandas, Natural Language Toolkit (NLTK), Seaborn, Matplotlib</p>
             </div>
+            <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-900/80 transition duration-300">
+                <h3 class="font-gaming text-xs font-bold uppercase tracking-widest text-red-500 mb-3">Tools & Systems</h3>
+                <p class="text-gray-300 text-md font-medium">Git, GitLab, Visual Studio Code, PyCharm, Overleaf (LaTeX), Streamlit</p>
+            </div>
+            <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-900/80 transition duration-300 lg:col-span-3">
+                <h3 class="font-gaming text-xs font-bold uppercase tracking-widest text-red-500 mb-3">Core Framework Methodologies</h3>
+                <p class="text-gray-300 text-md font-medium">
+                    Train-Test Splits, Baseline Data Preprocessing, Text Tokenization & Stemming, Tf-Idf Matrix Vectorization, Core Machine Learning Lifecycle
+                </p>
+            </div>
+        </div>
+        
+        <!-- Language Matrix -->
+        <div class="mt-6 p-4 bg-zinc-950 border border-zinc-800 rounded-lg text-center flex flex-wrap justify-center gap-4 text-xs font-gaming font-bold text-gray-400">
+            <span class="px-3 py-1 bg-black border border-zinc-800 rounded">🇬🇧 English: Fluent (C1)</span>
+            <span class="px-3 py-1 bg-black border border-zinc-800 rounded text-red-400">🇩🇪 German: A2/B1 Active Learner</span>
+            <span class="px-3 py-1 bg-black border border-zinc-800 rounded">🇮🇳 Hindi / Gujarati: Native</span>
         </div>
     </section>
 
-    <!-- Interactive Projects Workspace -->
-    <section id="projects" class="py-24 px-6 bg-gray-950 border-t border-gray-800/50">
+    <!-- Dynamic Tactical Project Hub -->
+    <section id="projects" class="py-24 bg-zinc-950 border-t border-red-950/40 px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-3 text-white">Interactive Projects Space</h2>
-                <p class="text-gray-400 text-sm max-w-xl mx-auto">
-                    Select a core repository tab to dynamically explore my modular folder structural setups directly synced via the GitHub API.
+                <h2 class="font-gaming text-3xl font-black tracking-widest text-white uppercase">
+                    Interactive <span class="text-red-500">Workspace</span>
+                </h2>
+                <p class="text-gray-400 text-sm font-gaming uppercase tracking-wider mt-2 opacity-70">
+                    Live telemetry link connected directly with Git source nodes
                 </p>
                 
-                <!-- Toggle Controls -->
+                <!-- Cyberpunk Selector Buttons -->
                 <div class="flex justify-center gap-4 mt-8">
-                    <button id="btn-llm" onclick="fetchProjects('llm-application', 'blue')" class="px-5 py-2.5 rounded-lg font-medium text-sm transition bg-blue-600 text-white shadow-lg shadow-blue-900/30">
-                        🧠 llm-application Hub
+                    <button id="btn-llm" onclick="fetchProjects('llm-application', 'red')" class="font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase">
+                        🧠 llm-application
                     </button>
-                    <button id="btn-models" onclick="fetchProjects('Models', 'purple')" class="px-5 py-2.5 rounded-lg font-medium text-sm transition bg-gray-900 text-gray-400 hover:text-white border border-gray-800">
+                    <button id="btn-models" onclick="fetchProjects('Models', 'zinc')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-black text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase">
                         📊 Models Hub
                     </button>
                 </div>
             </div>
 
-            <!-- Programmatic Container Grid Target Area -->
+            <!-- Programmatic Container Display Target -->
             <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="col-span-full text-center text-gray-500 py-12 animate-pulse">Establishing secure handshake pipeline with GitHub API...</div>
+                <div class="col-span-full text-center text-red-500 font-gaming text-sm uppercase tracking-widest py-12 animate-pulse">
+                    Initializing Handshake Link With GitHub API...
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-gray-800 bg-gray-950 text-center text-xs text-gray-500">
-        <p class="mb-2">Deep Patel &nbsp;|&nbsp; Master's Student in Artificial Intelligence</p>
-        <p>&copy; 2026 Developer Portfolio portal.</p>
+    <!-- Footer System -->
+    <footer class="py-12 border-t border-zinc-900 bg-black text-center text-xs text-gray-500 font-gaming uppercase tracking-widest">
+        <p class="mb-2">Deep Patel &nbsp;//&nbsp; Artificial Intelligence Framework Architect</p>
+        <p class="opacity-40">&copy; 2026 Core Portfolio Operational Portal.</p>
     </footer>
 
-    <!-- JavaScript REST Engine Integration Backend -->
+    <!-- JavaScript Data Integration Layer -->
     <script>
         const GITHUB_USERNAME = "painx9"; 
 
-        // Project Description Map matching your resume elements
+        // Local Description Override Mapping Matrix
         const resumeDescriptions = {
             "python-react-automation-agent-framework": "Programmed a library-free implementation of the Reasoning and Acting (ReAct) pattern using Python with regex outputs parsing.",
             "al-resume-analyzer-pro": "Developed an interactive web application in Python using Streamlit to accept and parse text inputs from uploaded documents using an LLM API.",
@@ -173,20 +205,20 @@
             "sonar-acoustic-reflectivity-discrimination-framework": "Processed 60 discrete acoustic reflectivity signals to sort objects into geological or artificial metallic anomalies using Logistic Regression."
         };
 
-        async function fetchProjects(repoName, themeColor) {
+        async function fetchProjects(repoName, mode) {
             const grid = document.getElementById('project-grid');
             updateTabStyles(repoName);
-            grid.innerHTML = `<div class="col-span-full text-center text-gray-500 py-12 animate-pulse">Fetching latest structural nodes from repository...</div>`;
+            grid.innerHTML = `<div class="col-span-full text-center text-red-500 font-gaming text-xs uppercase tracking-widest py-12 animate-pulse">Syncing environment nodes...</div>`;
             
             try {
                 const response = await fetch(`https://api.github.com/repos/${GITHUB_USERNAME}/${repoName}/contents`);
-                if (!response.ok) throw new Error('API target response resolution rejected');
+                if (!response.ok) throw new Error('API connection failure');
                 const items = await response.json();
 
                 const folders = items.filter(item => item.type === 'dir' && !item.name.startsWith('.'));
 
                 if (folders.length === 0) {
-                    grid.innerHTML = `<div class="col-span-full text-center text-gray-500 py-12">No project sub-directories mapped inside this root framework yet.</div>`;
+                    grid.innerHTML = `<div class="col-span-full text-center font-gaming text-xs text-gray-600 uppercase tracking-widest py-12">No tactical modules detected in this repository.</div>`;
                     return;
                 }
 
@@ -195,28 +227,28 @@
                 folders.forEach(folder => {
                     const cleanLookupKey = folder.name.toLowerCase();
                     const projectSummary = resumeDescriptions[cleanLookupKey] || 
-                        "Modular dataset structure mapping custom ML configurations, data tracking pipelines, and local test run components.";
+                        "Modular structural layout mapping analytical tracking systems, source files, and parameter pipeline controls.";
 
                     let displayName = folder.name
                         .replace(/^\d+[-_]/, '') 
                         .replace(/[-_]/g, ' ')   
                         .replace(/\b\w/g, char => char.toUpperCase());
 
-                    const badgeStyle = themeColor === 'blue' ? 'text-blue-400 bg-blue-950/60 border-blue-900' : 'text-purple-400 bg-purple-950/60 border-purple-900';
-                    const borderHover = themeColor === 'blue' ? 'hover:border-blue-500/40' : 'hover:border-purple-500/40';
+                    const activeBorder = mode === 'red' ? 'hover:border-red-500/80 shadow-[0_0_10px_rgba(239,68,68,0.1)] hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'hover:border-red-500/80';
+                    const activeBadge = repoName === 'llm-application' ? 'text-red-400 bg-red-950/30 border-red-900/60' : 'text-gray-400 bg-zinc-900 border-zinc-800';
 
                     const cardHtml = `
-                        <div class="bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col justify-between transition-all duration-300 ${borderHover} group shadow-sm hover:shadow-md">
+                        <div class="bg-black p-6 border border-zinc-800 rounded-md flex flex-col justify-between transition-all duration-300 ${activeBorder} group">
                             <div>
-                                <span class="text-[10px] font-mono tracking-wider px-2.5 py-1 rounded-md border ${badgeStyle}">
-                                    ${repoName === 'llm-application' ? 'GENAI / AUTOMATION' : 'CORE MACHINE LEARNING'}
+                                <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border ${activeBadge}">
+                                    ${repoName === 'llm-application' ? 'GENAI / LLM' : 'CORE REPO MODULE'}
                                 </span>
-                                <h3 class="text-lg font-bold text-white mt-4 mb-2 group-hover:text-gray-100 transition tracking-tight">${displayName}</h3>
-                                <p class="text-gray-400 text-xs leading-relaxed">${projectSummary}</p>
+                                <h3 class="font-gaming text-md font-bold text-white mt-4 mb-2 group-hover:text-red-400 transition duration-300 tracking-wider uppercase">${displayName}</h3>
+                                <p class="text-gray-400 text-xs leading-relaxed font-medium">${projectSummary}</p>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-800/60">
-                                <a href="${folder.html_url}" target="_blank" class="inline-flex items-center text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition gap-1">
-                                    Open Project Files <span>➔</span>
+                            <div class="mt-6 pt-4 border-t border-zinc-900">
+                                <a href="${folder.html_url}" target="_blank" class="font-gaming inline-flex items-center text-[11px] font-bold text-red-500 hover:text-white transition duration-300 gap-1 tracking-wider uppercase">
+                                    Access Codebase <span>// ➔</span>
                                 </a>
                             </div>
                         </div>
@@ -226,7 +258,7 @@
 
             } catch (error) {
                 console.error(error);
-                grid.innerHTML = `<div class="col-span-full text-center text-red-400 py-12 text-sm">Failed to verify active directory structure with GitHub APIs. Check network status or repository settings.</div>`;
+                grid.innerHTML = `<div class="col-span-full text-center text-red-600 font-gaming text-xs uppercase tracking-widest py-12">Handshake error: Failed to connect to telemetry stream.</div>`;
             }
         }
 
@@ -235,16 +267,16 @@
             const btnModels = document.getElementById('btn-models');
 
             if (activeRepo === 'llm-application') {
-                btnLlm.className = "px-5 py-2.5 rounded-lg font-medium text-sm transition bg-blue-600 text-white shadow-lg shadow-blue-900/30";
-                btnModels.className = "px-5 py-2.5 rounded-lg font-medium text-sm transition bg-gray-900 text-gray-400 hover:text-white border border-gray-800";
+                btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase";
+                btnModels.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-black text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
             } else {
-                btnModels.className = "px-5 py-2.5 rounded-lg font-medium text-sm transition bg-purple-600 text-white shadow-lg shadow-purple-900/30";
-                btnLlm.className = "px-5 py-2.5 rounded-lg font-medium text-sm transition bg-gray-900 text-gray-400 hover:text-white border border-gray-800";
+                btnModels.className = "font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase";
+                btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-black text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
             }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            fetchProjects('llm-application', 'blue');
+            fetchProjects('llm-application', 'red');
         });
     </script>
 </body>
