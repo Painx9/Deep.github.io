@@ -59,7 +59,7 @@
                 <a href="#projects" class="font-gaming px-6 py-3 border border-red-500 text-red-500 bg-red-950/20 text-sm font-bold tracking-widest rounded-md transition duration-300 neon-glow-red neon-glow-red-hover uppercase">
                     🚀 View Projects
                 </a>
-                <a href="https://github.com/painx9" target="_blank" class="font-gaming px-6 py-3 border border-gray-800 text-gray-400 bg-gray-900/40 text-sm font-bold tracking-widest rounded-md transition duration-300 hover:text-white hover:border-gray-600 uppercase">
+                <a href="https://github.com/Painx9" target="_blank" class="font-gaming px-6 py-3 border border-gray-800 text-gray-400 bg-gray-900/40 text-sm font-bold tracking-widest rounded-md transition duration-300 hover:text-white hover:border-gray-600 uppercase">
                     📂 GitHub Profile
                 </a>
             </div>
@@ -68,7 +68,6 @@
         <!-- Glowing Image Container -->
         <div class="lg:col-span-5 flex justify-center items-center">
             <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] border-2 border-red-500 bg-red-950/30 overflow-hidden flex justify-center items-center neon-glow-red">
-                <!-- Fallback Icon Avatar / Placeholder for Profile Picture -->
                 <div class="text-center p-8">
                     <span class="font-gaming text-5xl md:text-7xl font-black text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.8)]">🧠</span>
                     <p class="font-gaming text-xs tracking-widest mt-4 text-white uppercase opacity-70">SYSTEM ENGAGED</p>
@@ -166,9 +165,11 @@
                 
                 <!-- Cyberpunk Selector Buttons -->
                 <div class="flex justify-center gap-4 mt-8">
-                    <button id="btn-llm" onclick="fetchProjects('llm-application', 'red')" class="font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase">
-                        🧠 llm-application
+                    <!-- FIXED BUTTON ATTRIBUTE: Passed exact GitHub Repo Name spelling -->
+                    <button id="btn-llm" onclick="fetchProjects('LLM_Applications', 'red')" class="font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase">
+                        🧠 LLM_Applications
                     </button>
+                    <!-- FIXED BUTTON ATTRIBUTE: Passed exact GitHub Repo Name spelling -->
                     <button id="btn-models" onclick="fetchProjects('Models', 'zinc')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-black text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase">
                         📊 Models Hub
                     </button>
@@ -192,7 +193,8 @@
 
     <!-- JavaScript Data Integration Layer -->
     <script>
-        const GITHUB_USERNAME = "painx9"; 
+        // FIXED CONFIGURATION: Matched case capitalization perfectly
+        const GITHUB_USERNAME = "Painx9"; 
 
         // Local Description Override Mapping Matrix
         const resumeDescriptions = {
@@ -235,13 +237,13 @@
                         .replace(/\b\w/g, char => char.toUpperCase());
 
                     const activeBorder = mode === 'red' ? 'hover:border-red-500/80 shadow-[0_0_10px_rgba(239,68,68,0.1)] hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'hover:border-red-500/80';
-                    const activeBadge = repoName === 'llm-application' ? 'text-red-400 bg-red-950/30 border-red-900/60' : 'text-gray-400 bg-zinc-900 border-zinc-800';
+                    const activeBadge = repoName === 'LLM_Applications' ? 'text-red-400 bg-red-950/30 border-red-900/60' : 'text-gray-400 bg-zinc-900 border-zinc-800';
 
                     const cardHtml = `
                         <div class="bg-black p-6 border border-zinc-800 rounded-md flex flex-col justify-between transition-all duration-300 ${activeBorder} group">
                             <div>
                                 <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border ${activeBadge}">
-                                    ${repoName === 'llm-application' ? 'GENAI / LLM' : 'CORE REPO MODULE'}
+                                    ${repoName === 'LLM_Applications' ? 'GENAI / LLM' : 'CORE REPO MODULE'}
                                 </span>
                                 <h3 class="font-gaming text-md font-bold text-white mt-4 mb-2 group-hover:text-red-400 transition duration-300 tracking-wider uppercase">${displayName}</h3>
                                 <p class="text-gray-400 text-xs leading-relaxed font-medium">${projectSummary}</p>
@@ -266,7 +268,7 @@
             const btnLlm = document.getElementById('btn-llm');
             const btnModels = document.getElementById('btn-models');
 
-            if (activeRepo === 'llm-application') {
+            if (activeRepo === 'LLM_Applications') {
                 btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase";
                 btnModels.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-black text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
             } else {
@@ -276,7 +278,8 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            fetchProjects('llm-application', 'red');
+            // FIXED INITIALIZER: Boot up mapping exact string values
+            fetchProjects('LLM_Applications', 'red');
         });
     </script>
 </body>
