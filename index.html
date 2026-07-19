@@ -334,7 +334,7 @@
                         .replace(/\b\w/g, char => char.toUpperCase());
 
                     const activeBorder = mode === 'red' ? 'hover:border-red-500/80 shadow-[0_0_10px_rgba(239,68,68,0.1)] hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'hover:border-red-500/80';
-                    const activeBadge = repoName === 'LLM_Applications' ? 'text-red-400 bg-red-950/30 border-red-900/60' : 'text-gray-400 bg-zinc-900 border-zinc-800';
+                    const activeBadge = 'text-red-400 bg-red-950/30 border-red-900/60';
 
                     const cardHtml = `
                         <div class="bg-zinc-950 p-6 border border-zinc-800 rounded-md flex flex-col justify-between transition-all duration-300 ${activeBorder} group">
