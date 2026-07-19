@@ -253,14 +253,55 @@
     <script>
         const GITHUB_USERNAME = "Painx9"; 
 
+        // ---------------------------------------------------------
+        // HOW TO ADD NEW PROJECTS:
+        // Copy one of the blocks below, change the name in quotes to 
+        // match your exact GitHub folder name (all lowercase), and 
+        // fill in the mission, tech, and details!
+        // ---------------------------------------------------------
         const resumeDescriptions = {
-            "python-react-automation-agent-framework": "Programmed a library-free implementation of the Reasoning and Acting (ReAct) pattern using Python with regex outputs parsing.",
-            "al-resume-analyzer-pro": "Developed an interactive web application in Python using Streamlit to accept and parse text inputs from uploaded documents using an LLM API.",
-            "fake-news-classification-pipeline": "Cleaned a textual dataset using Python's regular expressions, applied NLTK stop-words extraction, and trained a standard Logistic Regression model.",
-            "california-house-price-prediction-model": "Imported housing datasets via Scikit-Learn, ran analytical Seaborn heatmaps, and configured an optimized XGBoost Regressor.",
-            "automated-loan-status-prediction-engine": "Processed loan parameters by drop-handling sparse spaces and clean-encoding features to train a stratified linear SVM classifier.",
-            "pima-diabetes-diagnostics-classifier": "Standardized physiological variations with Scikit-Learn's StandardScaler tool and fit a linear Support Vector Machine model.",
-            "sonar-acoustic-reflectivity-discrimination-framework": "Processed 60 discrete acoustic reflectivity signals to sort objects into geological or artificial metallic anomalies using Logistic Regression."
+            "python-react-automation-agent-framework": {
+                mission: "Implement a logic loop without external dependencies.",
+                tech: "Python, Groq API, Regex",
+                details: "Built library-free implementation of the Reasoning and Acting (ReAct) pattern capturing text answers natively."
+            },
+            "al-resume-analyzer-pro": {
+                mission: "Automate manual resume screening and skill gap analysis.",
+                tech: "Python, Streamlit, LLM API",
+                details: "Developed an interactive web application to evaluate user skill sets against specific job descriptions."
+            },
+            "fake-news-classification-pipeline": {
+                mission: "Detect misinformation using linguistic tokenization.",
+                tech: "Python, NLTK, Scikit-Learn",
+                details: "Cleaned textual datasets with regex, extracted stop-words, and trained a Logistic Regression classifier."
+            },
+            "california-house-price-prediction-model": {
+                mission: "Forecast housing prices based on demographic datasets.",
+                tech: "Python, XGBoost, Seaborn",
+                details: "Generated linear correlation matrices and evaluated predictions using R2 scores and Mean Absolute Errors."
+            },
+            "automated-loan-status-prediction-engine": {
+                mission: "Predict loan approval probabilities for financial pipelines.",
+                tech: "Scikit-Learn, Pandas, SVM",
+                details: "Processed sparse data handling and clean-encoded string variables to train a stratified linear SVM classifier."
+            },
+            "pima-diabetes-diagnostics-classifier": {
+                mission: "Analyze physiological data to classify diabetes risks.",
+                tech: "Python, StandardScaler, SVM",
+                details: "Standardized numerical variations across medical records and fit a baseline Support Vector Machine."
+            },
+            "sonar-acoustic-reflectivity-discrimination-framework": {
+                mission: "Differentiate metallic anomalies from geological structures.",
+                tech: "Python, NumPy, Logistic Regression",
+                details: "Processed 60 discrete acoustic reflectivity signals grouping samples by class structure averages."
+            }
+        };
+
+        // Fallback for new projects not added to the dictionary yet
+        const defaultProject = {
+            mission: "Execute specific analytical workflow.",
+            tech: "Python, Core ML Libraries",
+            details: "Modular structural layout mapping analytical tracking systems, source files, and parameter pipeline controls."
         };
 
         async function fetchProjects(repoName, mode) {
@@ -284,8 +325,7 @@
                 
                 folders.forEach(folder => {
                     const cleanLookupKey = folder.name.toLowerCase();
-                    const projectSummary = resumeDescriptions[cleanLookupKey] || 
-                        "Modular structural layout mapping analytical tracking systems, source files, and parameter pipeline controls.";
+                    const projectData = resumeDescriptions[cleanLookupKey] || defaultProject;
 
                     let displayName = folder.name
                         .replace(/^\d+[-_]/, '') 
@@ -301,8 +341,21 @@
                                 <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border ${activeBadge}">
                                     ${repoName === 'LLM_Applications' ? 'GENAI / LLM' : 'CORE REPO MODULE'}
                                 </span>
-                                <h3 class="font-gaming text-md font-bold text-white mt-4 mb-2 group-hover:text-red-400 transition duration-300 tracking-wider uppercase">${displayName}</h3>
-                                <p class="text-gray-400 text-xs leading-relaxed font-medium">${projectSummary}</p>
+                                <h3 class="font-gaming text-md font-bold text-white mt-4 mb-3 group-hover:text-red-400 transition duration-300 tracking-wider uppercase">${displayName}</h3>
+                                
+                                <div class="space-y-2 mt-2">
+                                    <p class="text-gray-300 text-xs leading-relaxed font-medium">
+                                        <span class="text-red-500 font-bold tracking-widest text-[10px] uppercase block mb-0.5">[MISSION]</span>
+                                        ${projectData.mission}
+                                    </p>
+                                    <p class="text-gray-300 text-xs leading-relaxed font-medium">
+                                        <span class="text-red-500 font-bold tracking-widest text-[10px] uppercase block mb-0.5">[TECH_STACK]</span>
+                                        <span class="text-gray-400">${projectData.tech}</span>
+                                    </p>
+                                    <p class="text-gray-500 text-[11px] leading-relaxed mt-2 pt-2 border-t border-zinc-800">
+                                        ${projectData.details}
+                                    </p>
+                                </div>
                             </div>
                             <div class="mt-6 pt-4 border-t border-zinc-900">
                                 <a href="${folder.html_url}" target="_blank" class="font-gaming inline-flex items-center text-[11px] font-bold text-red-500 hover:text-white transition duration-300 gap-1 tracking-wider uppercase">
