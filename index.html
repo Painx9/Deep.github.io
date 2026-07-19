@@ -128,7 +128,7 @@
         </div>
     </section>
 
-    <!-- Dynamic Tactical Project Hub (Moved Above Skills) -->
+    <!-- Dynamic Tactical Project Hub -->
     <section id="projects" class="py-24 bg-black px-6">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-12">
@@ -253,53 +253,54 @@
     <script>
         const GITHUB_USERNAME = "Painx9"; 
 
-        // ---------------------------------------------------------
-        // HOW TO ADD NEW PROJECTS:
-        // Copy one of the blocks below, change the name in quotes to 
-        // match your exact GitHub folder name (all lowercase), and 
-        // fill in the mission, tech, and details!
-        // ---------------------------------------------------------
+        // =========================================================================
+        // 🛠️ HOW TO EDIT OR ADD NEW PROJECTS:
+        // =========================================================================
+        // 1. Find the exact name of the folder in your GitHub repository (e.g. "my-new-ai-model").
+        // 2. Add it below in quotes (must be all lowercase!).
+        // 3. Fill out the mission (problem solved), tech (tools used), and details.
+        // =========================================================================
         const resumeDescriptions = {
             "python-react-automation-agent-framework": {
-                mission: "Implement a logic loop without external dependencies.",
+                mission: "Implement a logic loop without external framework dependencies.",
                 tech: "Python, Groq API, Regex",
-                details: "Built library-free implementation of the Reasoning and Acting (ReAct) pattern capturing text answers natively."
+                details: "Built a library-free implementation of the Reasoning and Acting (ReAct) pattern, utilizing regex to parse model outputs natively."
             },
             "al-resume-analyzer-pro": {
                 mission: "Automate manual resume screening and skill gap analysis.",
                 tech: "Python, Streamlit, LLM API",
-                details: "Developed an interactive web application to evaluate user skill sets against specific job descriptions."
+                details: "Developed an interactive web application that accepts and parses text inputs from uploaded files to evaluate skill sets against job descriptions."
             },
             "fake-news-classification-pipeline": {
                 mission: "Detect misinformation using linguistic tokenization.",
                 tech: "Python, NLTK, Scikit-Learn",
-                details: "Cleaned textual datasets with regex, extracted stop-words, and trained a Logistic Regression classifier."
+                details: "Cleaned textual datasets with regular expressions, extracted stop-words, and trained a standard Logistic Regression classifier."
             },
             "california-house-price-prediction-model": {
-                mission: "Forecast housing prices based on demographic datasets.",
+                mission: "Forecast housing prices based on demographic parameters.",
                 tech: "Python, XGBoost, Seaborn",
-                details: "Generated linear correlation matrices and evaluated predictions using R2 scores and Mean Absolute Errors."
+                details: "Imported datasets to generate linear correlation heatmaps and evaluated predictions using R2 scores and Mean Absolute Error."
             },
             "automated-loan-status-prediction-engine": {
                 mission: "Predict loan approval probabilities for financial pipelines.",
-                tech: "Scikit-Learn, Pandas, SVM",
-                details: "Processed sparse data handling and clean-encoded string variables to train a stratified linear SVM classifier."
+                tech: "Python, Scikit-Learn, Pandas, SVM",
+                details: "Processed sparse application datasets by clean-encoding strings to train a stratified linear Support Vector Machine classifier."
             },
             "pima-diabetes-diagnostics-classifier": {
                 mission: "Analyze physiological data to classify diabetes risks.",
                 tech: "Python, StandardScaler, SVM",
-                details: "Standardized numerical variations across medical records and fit a baseline Support Vector Machine."
+                details: "Standardized highly varying numerical features across records to fit and partition a baseline linear SVM model."
             },
             "sonar-acoustic-reflectivity-discrimination-framework": {
                 mission: "Differentiate metallic anomalies from geological structures.",
                 tech: "Python, NumPy, Logistic Regression",
-                details: "Processed 60 discrete acoustic reflectivity signals grouping samples by class structure averages."
+                details: "Processed 60 discrete acoustic reflectivity columns, grouping data samples by class labels to compute feature averages."
             }
         };
 
-        // Fallback for new projects not added to the dictionary yet
+        // Fallback data if a project folder is not listed above
         const defaultProject = {
-            mission: "Execute specific analytical workflow.",
+            mission: "Execute specific analytical workflow and data processing.",
             tech: "Python, Core ML Libraries",
             details: "Modular structural layout mapping analytical tracking systems, source files, and parameter pipeline controls."
         };
@@ -352,7 +353,7 @@
                                         <span class="text-red-500 font-bold tracking-widest text-[10px] uppercase block mb-0.5">[TECH_STACK]</span>
                                         <span class="text-gray-400">${projectData.tech}</span>
                                     </p>
-                                    <p class="text-gray-500 text-[11px] leading-relaxed mt-2 pt-2 border-t border-zinc-800">
+                                    <p class="text-gray-500 text-[11px] leading-relaxed mt-3 pt-3 border-t border-zinc-800/60">
                                         ${projectData.details}
                                     </p>
                                 </div>
