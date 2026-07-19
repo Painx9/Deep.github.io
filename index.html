@@ -339,8 +339,8 @@
                     const cardHtml = `
                         <div class="bg-zinc-950 p-6 border border-zinc-800 rounded-md flex flex-col justify-between transition-all duration-300 ${activeBorder} group">
                             <div>
-                                <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border ${activeBadge}">
-                                    ${repoName === 'LLM_Applications' ? 'GENAI / LLM' : 'CORE REPO MODULE'}
+                                <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border inline-block uppercase ${activeBadge}">
+                                    ${projectData.tech}
                                 </span>
                                 <h3 class="font-gaming text-md font-bold text-white mt-4 mb-3 group-hover:text-red-400 transition duration-300 tracking-wider uppercase">${displayName}</h3>
                                 
@@ -348,10 +348,6 @@
                                     <p class="text-gray-300 text-xs leading-relaxed font-medium">
                                         <span class="text-red-500 font-bold tracking-widest text-[10px] uppercase block mb-0.5">[MISSION]</span>
                                         ${projectData.mission}
-                                    </p>
-                                    <p class="text-gray-300 text-xs leading-relaxed font-medium">
-                                        <span class="text-red-500 font-bold tracking-widest text-[10px] uppercase block mb-0.5">[TECH_STACK]</span>
-                                        <span class="text-gray-400">${projectData.tech}</span>
                                     </p>
                                     <p class="text-gray-500 text-[11px] leading-relaxed mt-3 pt-3 border-t border-zinc-800/60">
                                         ${projectData.details}
