@@ -253,13 +253,7 @@
     <script>
         const GITHUB_USERNAME = "Painx9"; 
 
-        // =========================================================================
-        // 🛠️ HOW TO EDIT OR ADD NEW PROJECTS:
-        // =========================================================================
-        // 1. Find the exact name of the folder in your GitHub repository (e.g. "my-new-ai-model").
-        // 2. Add it below in quotes (must be all lowercase!).
-        // 3. Fill out the mission (problem solved), tech (tools used), and details.
-        // =========================================================================
+        
         const resumeDescriptions = {
             "ai-video-analyzer": {
                 mission: "To eliminate the tedious chore of watching hours of video content by instantly transforming any YouTube URL into an interactive, structured, and searchable knowledge asset.",
@@ -267,9 +261,9 @@
                 details: "This project is a Streamlit dashboard that leverages the gemini-3.1-flash-lite model to automatically summarize and analyze YouTube videos. It features a dual-column interface providing automated text insights alongside an interactive Q&A sandbox for querying specific video content directly."
             },
             "resume-analyzer": {
-                mission: "Automate manual resume screening and skill gap analysis.",
-                tech: "Python, Streamlit, LLM API",
-                details: "Developed an interactive web application that accepts and parses text inputs from uploaded files to evaluate skill sets against job descriptions."
+                mission: "Job seekers often struggle to optimize their resumes for rigid Applicant Tracking Systems (ATS), leading to immediate automated rejections. This application solves that by instantly analyzing uploaded resumes against modern recruiting algorithms to highlight critical structural and content gaps.",
+                tech: "Python, Streamlit, Google GenAI SDK, gemini-3.1-flash-lite, Pydantic(Structured JSON Outputs), PyPDF2(PDF Parsing).",
+                details: "A production-ready AI application that extracts raw text from PDF resumes and processes it through a strict schema-enforced LLM pipeline. It securely calculates a real-time ATS match score and generates dynamic, structured visual summaries detailing candidate strengths and areas to improve."
             },
             "react-ai-agent": {
                 mission: "This project solves the problem of heavy framework dependency by building a lightweight, zero-dependency ReAct (Reasoning + Acting) AI agent. It allows LLMs to dynamically think, invoke local custom functions, and parse observations without using complex frameworks like LangChain or CrewAI.",
@@ -286,10 +280,10 @@
                 tech: "Python, Scikit-Learn, Pandas, SVM",
                 details: "Processed sparse application datasets by clean-encoding strings to train a stratified linear Support Vector Machine classifier."
             },
-            "pima-diabetes-diagnostics-classifier": {
-                mission: "Analyze physiological data to classify diabetes risks.",
-                tech: "Python, StandardScaler, SVM",
-                details: "Standardized highly varying numerical features across records to fit and partition a baseline linear SVM model."
+            "diabetes-prediction-ml": {
+                mission: "Early detection of diabetes is critical to preventing severe, long-term health complications, yet manual diagnostic screening can be slow and reactive. This project builds a predictive system to instantly evaluate a patient's metabolic metrics and catch early warning signs of diabetes vulnerability.",
+                tech: "Python, Pandas, Numpy, Scikit-Learn, StandardScaler, SVM, Streamlit",
+                details: "The system standardizes 8 core patient physiological metrics (like Glucose, BMI, and Age) to train a linear Support Vector Classifier that achieves a ~77% classification accuracy on test data. This logic is deployed via an interactive Streamlit web dashboard, translating complex model inference into real-time, user-friendly diagnostic insights."
             },
             "sonar-acoustic-reflectivity-discrimination-framework": {
                 mission: "Differentiate metallic anomalies from geological structures.",
