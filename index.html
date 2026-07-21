@@ -206,8 +206,8 @@
                     <button id="btn-models" onclick="fetchProjects('Models', 'red')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase">
                         MODELS HUB
                     </button>
-                    <button id="btn-GEN_AI" onclick="fetchProjects('Models', 'red')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase">
-                        GEN-AI
+                    <button id="btn-genai" onclick="fetchProjects('GEN_AI', 'red')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase">
+                        GEN_AI HUB
                     </button>
                 </div>
             </div>
@@ -392,7 +392,6 @@
             });
         }
 
-        // Add "streamlit: 'YOUR_LINK'" property to projects that have live apps
         const resumeDescriptions = {
             "ai-video-analyzer": {
                 mission: "To eliminate the tedious chore of watching hours of video content by instantly transforming any YouTube URL into an interactive, structured, and searchable knowledge asset.",
@@ -530,13 +529,20 @@
         function updateTabStyles(activeRepo) {
             const btnLlm = document.getElementById('btn-llm');
             const btnModels = document.getElementById('btn-models');
+            const btnGenAi = document.getElementById('btn-genai');
 
+            // Reset all buttons to default dark style
+            btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
+            btnModels.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
+            btnGenAi.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
+
+            // Apply active red glow style based on selected repo
             if (activeRepo === 'LLM_Applications') {
                 btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase";
-                btnModels.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
-            } else {
+            } else if (activeRepo === 'Models') {
                 btnModels.className = "font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase";
-                btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white hover:border-gray-600 uppercase";
+            } else if (activeRepo === 'GEN_AI') {
+                btnGenAi.className = "font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase";
             }
         }
 
