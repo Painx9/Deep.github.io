@@ -437,11 +437,11 @@
             }
         };
 
-        // Fallback data if a project folder is not listed above
+        // Fallback data for folders currently in active development
         const defaultProject = {
-            mission: "Loading...",
-            tech: "Loading...",
-            details: "Loading..."
+            mission: "Core architecture currently being synthesized and compiled in local development environment.",
+            tech: "Python, Experimental Branch, In-Progress",
+            details: "Tactical module under active development. Telemetry and live telemetry nodes will be initialized upon deployment completion."
         };
 
         async function fetchProjects(repoName, mode) {
@@ -456,6 +456,12 @@
 
                 const folders = items.filter(item => item.type === 'dir' && !item.name.startsWith('.'));
 
+                folders.sort((a, b) => {
+                    const aKnown = resumeDescriptions[a.name.toLowerCase()] ? 0 : 1;
+                    const bKnown = resumeDescriptions[b.name.toLowerCase()] ? 0 : 1;
+                    return aKnown - bKnown;
+                });
+
                 if (folders.length === 0) {
                     grid.innerHTML = `<div class="col-span-full text-center font-gaming text-xs text-gray-600 uppercase tracking-widest py-12">No tactical modules detected in this repository.</div>`;
                     return;
@@ -465,6 +471,7 @@
                 
                 folders.forEach(folder => {
                     const cleanLookupKey = folder.name.toLowerCase();
+                    const isKnownProject = resumeDescriptions[cleanLookupKey] !== undefined;
                     const projectData = resumeDescriptions[cleanLookupKey] || defaultProject;
 
                     let displayName = folder.name
@@ -475,6 +482,15 @@
                     const activeBorder = mode === 'red' ? 'hover:border-red-500/80 shadow-[0_0_10px_rgba(239,68,68,0.1)] hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'hover:border-red-500/80';
                     
                     // Dynamically generate Streamlit button if URL exists in description object
+                    const statusBadge = isKnownProject ? `
+                        <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border inline-block uppercase text-red-400 bg-red-950/30 border-red-900/60">
+                            ${projectData.tech}
+                        </span>
+                    ` : `
+                        <span class="font-gaming text-[9px] font-bold tracking-widest px-2.5 py-1 rounded border inline-block uppercase text-yellow-400 bg-yellow-950/20 border-yellow-900/50 animate-pulse">
+                            BUILDING // IN_PROGRESS
+                        </span>
+                    `;
                     const streamlitButton = projectData.streamlit ? `
                         <a href="${projectData.streamlit}" target="_blank" class="font-gaming inline-flex items-center text-[11px] font-bold text-cyan-400 hover:text-white transition duration-300 gap-1 tracking-wider uppercase bg-cyan-950/20 px-3 py-1.5 rounded border border-cyan-900/50">
                             Launch App
