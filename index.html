@@ -389,27 +389,31 @@
             });
         }
 
+        // Add "streamlit: 'YOUR_LINK'" property to projects that have live apps
         const resumeDescriptions = {
             "ai-video-analyzer": {
                 mission: "To eliminate the tedious chore of watching hours of video content by instantly transforming any YouTube URL into an interactive, structured, and searchable knowledge asset.",
                 tech: "Streamlit, Google GenAI SDK, Gemini 3.1 Flash Lite, Python",
-                details: "This project is a Streamlit dashboard that leverages the gemini-3.1-flash-lite model to automatically summarize and analyze YouTube videos. It features a dual-column interface providing automated text insights alongside an interactive Q&A sandbox for querying specific video content directly."
-                streamlit: "https://resume-analyzer09.streamlit.app/"
+                details: "This project is a Streamlit dashboard that leverages the gemini-3.1-flash-lite model to automatically summarize and analyze YouTube videos. It features a dual-column interface providing automated text insights alongside an interactive Q&A sandbox for querying specific video content directly.",
+                streamlit: "https://your-streamlit-app-link.streamlit.app"
             },
             "resume-analyzer": {
                 mission: "Job seekers often struggle to optimize their resumes for rigid Applicant Tracking Systems (ATS), leading to immediate automated rejections. This application solves that by instantly analyzing uploaded resumes against modern recruiting algorithms to highlight critical structural and content gaps.",
                 tech: "Python, Streamlit, Google GenAI SDK, gemini-3.1-flash-lite, Pydantic (Structured JSON Outputs), PyPDF2 (PDF Parsing).",
-                details: "A production-ready AI application that extracts raw text from PDF resumes and processes it through a strict schema-enforced LLM pipeline. It securely calculates a real-time ATS match score and generates dynamic, structured visual summaries detailing candidate strengths and areas to improve."
+                details: "A production-ready AI application that extracts raw text from PDF resumes and processes it through a strict schema-enforced LLM pipeline. It securely calculates a real-time ATS match score and generates dynamic, structured visual summaries detailing candidate strengths and areas to improve.",
+                streamlit: "https://your-streamlit-app-link.streamlit.app"
             },
             "react-ai-agent": {
                 mission: "This project solves the problem of heavy framework dependency by building a lightweight, zero-dependency ReAct (Reasoning + Acting) AI agent. It allows LLMs to dynamically think, invoke local custom functions, and parse observations without using complex frameworks like LangChain or CrewAI.",
                 tech: "Python 3, Regular Expressions, Groq API, Streamlit, Jupyter Notebook",
-                details: "The project implements an active Think --> Act --> Observe loop that matches LLM outputs to native Python tools (like custom math evaluation and mock weather lookups). It features an interactive Streamlit interface that visually breaks down each step of the agent's internal reasoning cycle in real time."
+                details: "The project implements an active Think --> Act --> Observe loop that matches LLM outputs to native Python tools (like custom math evaluation and mock weather lookups). It features an interactive Streamlit interface that visually breaks down each step of the agent's internal reasoning cycle in real time.",
+                streamlit: "https://your-streamlit-app-link.streamlit.app"
             },
             "weather-forecast": {
                 mission: "It eliminates the need for developers to host expensive backend infrastructure or manage sensitive user data by allowing users to securely bring their own OpenWeatherMap API key to check live global weather conditions.",
                 tech: "Python, Streamlit (Frontend/UI), OpenWeatherMap API (Weather data provider), Requests, and Pandas.",
-                details: "A lightweight, modular dashboard that fetches real-time weather metrics (temperature, humidity, atmospheric conditions) for any city globally, utilizing an architectural pattern where user credentials exist strictly in session memory."
+                details: "A lightweight, modular dashboard that fetches real-time weather metrics (temperature, humidity, atmospheric conditions) for any city globally, utilizing an architectural pattern where user credentials exist strictly in session memory.",
+                streamlit: "https://your-streamlit-app-link.streamlit.app"
             },
             "fake-news-prediction": {
                 mission: "This project automates the detection of online misinformation by automatically classifying news articles as Real or Fake. It addresses the challenge of manually fact-checking vast amounts of digital media to limit the spread of misleading information.",
@@ -419,7 +423,8 @@
             "diabetes-prediction-ml": {
                 mission: "Early detection of diabetes is critical to preventing severe, long-term health complications, yet manual diagnostic screening can be slow and reactive. This project builds a predictive system to instantly evaluate a patient's metabolic metrics and catch early warning signs of diabetes vulnerability.",
                 tech: "Python, Pandas, Numpy, Scikit-Learn, StandardScaler, SVM, Streamlit",
-                details: "The system standardizes 8 core patient physiological metrics (like Glucose, BMI, and Age) to train a linear Support Vector Classifier that achieves a ~77% classification accuracy on test data. This logic is deployed via an interactive Streamlit web dashboard, translating complex model inference into real-time, user-friendly diagnostic insights."
+                details: "The system standardizes 8 core patient physiological metrics (like Glucose, BMI, and Age) to train a linear Support Vector Classifier that achieves a ~77% classification accuracy on test data. This logic is deployed via an interactive Streamlit web dashboard, translating complex model inference into real-time, user-friendly diagnostic insights.",
+                streamlit: "https://your-streamlit-app-link.streamlit.app"
             },
             "sonar-acoustic-reflectivity-discrimination-framework": {
                 mission: "Differentiate metallic anomalies from geological structures.",
@@ -465,6 +470,13 @@
 
                     const activeBorder = mode === 'red' ? 'hover:border-red-500/80 shadow-[0_0_10px_rgba(239,68,68,0.1)] hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]' : 'hover:border-red-500/80';
                     
+                    // Dynamically generate Streamlit button if URL exists in description object
+                    const streamlitButton = projectData.streamlit ? `
+                        <a href="${projectData.streamlit}" target="_blank" class="font-gaming inline-flex items-center text-[11px] font-bold text-cyan-400 hover:text-white transition duration-300 gap-1 tracking-wider uppercase bg-cyan-950/20 px-3 py-1.5 rounded border border-cyan-900/50">
+                            Launch App <span>// ⚡</span>
+                        </a>
+                    ` : '';
+
                     const cardHtml = `
                         <div class="bg-zinc-950 p-6 border border-zinc-800 rounded-md flex flex-col justify-between transition-all duration-300 ${activeBorder} group">
                             <div>
@@ -493,11 +505,12 @@
                                 </div>
                             </div>
                             
-                            <!-- Access Link -->
-                            <div class="mt-6 pt-4 border-t border-zinc-900">
+                            <!-- Action Links Footer -->
+                            <div class="mt-6 pt-4 border-t border-zinc-900 flex flex-wrap items-center justify-between gap-3">
                                 <a href="${folder.html_url}" target="_blank" class="font-gaming inline-flex items-center text-[11px] font-bold text-red-500 hover:text-white transition duration-300 gap-1 tracking-wider uppercase">
                                     Access Codebase <span>// >></span>
                                 </a>
+                                ${streamlitButton}
                             </div>
                         </div>
                     `;
