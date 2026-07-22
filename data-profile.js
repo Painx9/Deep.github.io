@@ -2,7 +2,7 @@ const userProfile = {
     username: "Painx9",
     name: "Deep Patel",
     alias: "PA1N",
-    location: "Hamburg / Cottbus, Germany",
+    location: "Hamburg, Germany",
     email: "dp1852001@gmail.com",
     phone: "+49 155 6027 5161",
     github: "https://github.com/Painx9",
