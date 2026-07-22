@@ -1,3 +1,15 @@
+// Component Injector Engine for Modular HTML Layouts
+async function loadComponent(elementId, filePath) {
+    try {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`Could not load ${filePath}`);
+        const html = await response.text();
+        document.getElementById(elementId).innerHTML = html;
+    } catch (error) {
+        console.error("Component load error:", error);
+    }
+}
+
 // Language Switcher Engine
 function setLanguage(lang) {
     const btnEn = document.getElementById('lang-en');
@@ -116,6 +128,8 @@ function updateTabStyles(activeRepo) {
     const btnModels = document.getElementById('btn-models');
     const btnGenAi = document.getElementById('btn-genai');
 
+    if (!btnLlm || !btnModels || !btnGenAi) return;
+
     btnLlm.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white uppercase";
     btnModels.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white uppercase";
     btnGenAi.className = "font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white uppercase";
@@ -129,6 +143,16 @@ function updateTabStyles(activeRepo) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+    // Inject modular HTML components
+    await loadComponent('component-navbar', 'components/navbar.html');
+    await loadComponent('component-about', 'components/about.html');
+    await loadComponent('component-education', 'components/education.html');
+    await loadComponent('component-projects', 'components/projects.html');
+    await loadComponent('component-skills', 'components/skills.html');
+    await loadComponent('component-hobbies', 'components/hobbies.html');
+    await loadComponent('component-contact', 'components/contact.html');
+
+    // Trigger initial project rendering
     fetchProjects('LLM_Applications', 'red');
 });
