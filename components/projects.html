@@ -1,0 +1,17 @@
+<section id="projects" class="py-24 bg-black px-6">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="font-gaming text-3xl font-black tracking-widest text-white uppercase">
+                <span data-en="Interactive" data-de="Interaktiver">Interactive</span> <span class="text-red-500" data-en="Workspace" data-de="Arbeitsbereich">Workspace</span>
+            </h2>
+            <div class="flex justify-center gap-4 mt-8">
+                <button id="btn-llm" onclick="fetchProjects('LLM_Applications', 'red')" class="font-gaming px-5 py-2.5 rounded border border-red-500 bg-red-950/30 text-red-500 text-xs font-bold tracking-widest transition duration-300 neon-glow-red uppercase">LLM_APPLICATIONS</button>
+                <button id="btn-models" onclick="fetchProjects('Models', 'red')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white uppercase">MODELS HUB</button>
+                <button id="btn-genai" onclick="fetchProjects('GEN_AI', 'red')" class="font-gaming px-5 py-2.5 rounded border border-zinc-800 bg-zinc-900 text-gray-400 text-xs font-bold tracking-widest transition duration-300 hover:text-white uppercase">GEN_AI HUB</button>
+            </div>
+        </div>
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="col-span-full text-center text-red-500 font-gaming text-sm uppercase tracking-widest py-12 animate-pulse">Initializing Handshake Link With GitHub API...</div>
+        </div>
+    </div>
+</section>
