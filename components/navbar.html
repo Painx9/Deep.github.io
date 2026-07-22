@@ -1,0 +1,20 @@
+<nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-red-900/40">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="font-gaming text-xl font-black tracking-widest text-white">
+            PORT<span class="text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.6)]">FOLIO</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8 text-md font-semibold tracking-wider text-gray-400">
+            <a href="#about" data-en="Home" data-de="Startseite" class="nav-text hover:text-red-500 transition duration-300">Home</a>
+            <a href="#education" data-en="Education" data-de="Ausbildung" class="nav-text hover:text-red-500 transition duration-300">Education</a>
+            <a href="#projects" data-en="Projects" data-de="Projekte" class="nav-text hover:text-red-500 transition duration-300">Projects</a>
+            <a href="#skills" data-en="Skills" data-de="Fähigkeiten" class="nav-text hover:text-red-500 transition duration-300">Skills</a>
+            <a href="#hobbies" data-en="Hobbies" data-de="Hobbys" class="nav-text hover:text-red-500 transition duration-300">Hobbies</a>
+            <a href="#contact" data-en="Contact" data-de="Kontakt" class="nav-text hover:text-red-500 transition duration-300">Contact</a>
+            
+            <div class="flex items-center bg-zinc-900 border border-zinc-800 rounded p-1 text-xs font-gaming">
+                <button onclick="setLanguage('en')" id="lang-en" class="px-2.5 py-1 rounded bg-red-950/40 text-red-500 border border-red-500/50 transition">EN</button>
+                <button onclick="setLanguage('de')" id="lang-de" class="px-2.5 py-1 rounded text-gray-400 hover:text-white transition">DE</button>
+            </div>
+        </div>
+    </div>
+</nav>
