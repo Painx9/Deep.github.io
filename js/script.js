@@ -16,11 +16,11 @@ function setLanguage(lang) {
     const btnDe = document.getElementById('lang-de');
 
     if (lang === 'de') {
-        btnDe.className = "px-2.5 py-1 rounded bg-red-950/40 text-red-500 border border-red-500/50 transition";
-        btnEn.className = "px-2.5 py-1 rounded text-gray-400 hover:text-white transition";
+        if (btnDe) btnDe.className = "px-2.5 py-1 rounded bg-red-950/40 text-red-500 border border-red-500/50 transition";
+        if (btnEn) btnEn.className = "px-2.5 py-1 rounded text-gray-400 hover:text-white transition";
     } else {
-        btnEn.className = "px-2.5 py-1 rounded bg-red-950/40 text-red-500 border border-red-500/50 transition";
-        btnDe.className = "px-2.5 py-1 rounded text-gray-400 hover:text-white transition";
+        if (btnEn) btnEn.className = "px-2.5 py-1 rounded bg-red-950/40 text-red-500 border border-red-500/50 transition";
+        if (btnDe) btnDe.className = "px-2.5 py-1 rounded text-gray-400 hover:text-white transition";
     }
 
     document.querySelectorAll('[data-en]').forEach(el => {
@@ -35,8 +35,48 @@ function setLanguage(lang) {
     });
 }
 
+// Dynamic Theme Switcher Engine
+function setTheme(colorName) {
+    const root = document.documentElement;
+    
+    let primary, glow, glowHover;
+
+    switch(colorName) {
+        case 'cyan':
+            primary = '#22d3ee';
+            glow = 'rgba(34, 211, 238, 0.4)';
+            glowHover = 'rgba(34, 211, 238, 0.7)';
+            break;
+        case 'emerald':
+            primary = '#10b981';
+            glow = 'rgba(16, 185, 129, 0.4)';
+            glowHover = 'rgba(16, 185, 129, 0.7)';
+            break;
+        case 'purple':
+            primary = '#a855f7';
+            glow = 'rgba(168, 85, 247, 0.4)';
+            glowHover = 'rgba(168, 85, 247, 0.7)';
+            break;
+        case 'red':
+        default:
+            primary = '#ef4444';
+            glow = 'rgba(239, 68, 68, 0.4)';
+            glowHover = 'rgba(239, 68, 68, 0.7)';
+            break;
+    }
+
+    root.style.setProperty('--theme-primary', primary);
+    root.style.setProperty('--theme-bg-glow', glow);
+    root.style.setProperty('--theme-bg-glow-hover', glowHover);
+
+    // Save visitor's color choice
+    localStorage.setItem('portfolio_theme', colorName);
+}
+
 async function fetchProjects(repoName, mode) {
     const grid = document.getElementById('project-grid');
+    if (!grid) return;
+
     updateTabStyles(repoName);
     grid.innerHTML = `<div class="col-span-full text-center text-red-500 font-gaming text-xs uppercase tracking-widest py-12 animate-pulse">Syncing environment nodes...</div>`;
     
@@ -144,6 +184,10 @@ function updateTabStyles(activeRepo) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // Load saved theme preference on startup
+    const savedTheme = localStorage.getItem('portfolio_theme') || 'red';
+    setTheme(savedTheme);
+
     // Inject modular HTML components
     await loadComponent('component-navbar', 'components/navbar.html');
     await loadComponent('component-about', 'components/about.html');
