@@ -51,7 +51,7 @@ const resumeDescriptions = {
         mission: "Solves the challenge of estimating California housing market prices by leveraging machine learning to predict median district values based on geographic and demographic features.",
         tech: "Python, Streamlit, Scikit-Learn, XGBoost, Pandas, and NumPy.",
         details: "An end-to-end data science project utilizing the California Housing dataset to train an XGBoost regression model, deployed via an interactive Streamlit web dashboard for real-time predictions.",
-        streamlit: "https://sonar-vs-rock09.streamlit.app"
+        streamlit: "https://house-price-prediction09.streamlit.app"
     }
 };
 
