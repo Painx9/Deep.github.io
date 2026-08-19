@@ -42,6 +42,11 @@ function setTheme(colorName) {
     let primary, glow, glowHover;
 
     switch(colorName) {
+        case 'yellow':
+            primary = '#facc15';
+            glow = 'rgba(250, 204, 21, 0.4)';
+            glowHover = 'rgba(250, 204, 21, 0.7)';
+            break;
         case 'cyan':
             primary = '#22d3ee';
             glow = 'rgba(34, 211, 238, 0.4)';
@@ -129,7 +134,7 @@ async function fetchProjects(repoName, mode) {
             ` : '';
 
             const cardHtml = `
-                <div class="bg-zinc-950 p-6 border border-zinc-800 rounded-md flex flex-col justify-between transition-all duration-300 ${activeBorder} group">
+                <div class="card-hover-effect bg-zinc-950 p-6 border border-zinc-800 rounded-md flex flex-col justify-between group">
                     <div>
                         <h3 class="font-gaming text-md font-bold text-white mb-3 group-hover:text-red-400 transition duration-300 tracking-wider uppercase">${displayName}</h3>
                         <div class="space-y-4">
@@ -200,6 +205,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Trigger initial project rendering
     fetchProjects('LLM_Applications', 'red');
 });
+
 // Scroll Reveal Observer
 window.addEventListener('scroll', () => {
     const reveals = document.querySelectorAll('.reveal');
