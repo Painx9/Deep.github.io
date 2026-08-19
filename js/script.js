@@ -200,3 +200,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Trigger initial project rendering
     fetchProjects('LLM_Applications', 'red');
 });
+// Scroll Reveal Observer
+window.addEventListener('scroll', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            el.classList.add('active');
+        }
+    });
+});
