@@ -4,32 +4,56 @@
             <span data-en="Technical" data-de="Technische">Technical</span> <span class="text-red-500" data-en="Arsenal" data-de="Fähigkeiten">Arsenal</span>
         </h2>
         <p class="text-gray-400 text-sm max-w-xl mx-auto mb-12">
-            Click any core engine module below to shift focus and inspect telemetry specs.
+            Explore core competencies and technical domain modules. Click any module to center focus.
         </p>
 
-        <!-- Side-by-Side Rotating Skills Carousel Track -->
+        <!-- Side-by-Side Rotating Skills Track with Previous Pattern Categories -->
         <div class="skills-carousel-track" id="skills-track">
-            <!-- Dynamically populated or manually structured side-by-side nodes -->
-            <div onclick="focusSkill(this)" class="skill-node active-center flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
-                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_01]</span>
-                <h3 class="font-gaming text-lg font-bold text-white mb-2">Python & Core ML</h3>
-                <p class="text-xs text-gray-400">PyTorch, Scikit-Learn, Pandas, NumPy, Optimization algorithms.</p>
+            
+            <!-- Category 1: Machine Learning & Core -->
+            <div onclick="focusSkill(this)" class="skill-node active-center flex-shrink-0 w-72 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left card-hover-effect">
+                <span class="text-[10px] text-red-500 font-gaming block mb-1 uppercase tracking-widest">[DOMAIN_01]</span>
+                <h3 class="font-gaming text-md font-bold text-white mb-3">Machine Learning & Core</h3>
+                <ul class="space-y-1.5 text-xs text-gray-300 font-medium">
+                    <li class="flex items-center gap-2">✓ Python, PyTorch, Scikit-Learn</li>
+                    <li class="flex items-center gap-2">✓ Pandas, NumPy, SciPy</li>
+                    <li class="flex items-center gap-2">✓ Supervised & Unsupervised Learning</li>
+                </ul>
             </div>
-            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
-                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_02]</span>
-                <h3 class="font-gaming text-lg font-bold text-white mb-2">LLM & GenAI</h3>
-                <p class="text-xs text-gray-400">LangChain, Hugging Face Transformers, RAG Architectures, OpenAI API.</p>
+
+            <!-- Category 2: LLM & GenAI -->
+            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-72 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left card-hover-effect">
+                <span class="text-[10px] text-red-500 font-gaming block mb-1 uppercase tracking-widest">[DOMAIN_02]</span>
+                <h3 class="font-gaming text-md font-bold text-white mb-3">LLM & GenAI Systems</h3>
+                <ul class="space-y-1.5 text-xs text-gray-300 font-medium">
+                    <li class="flex items-center gap-2">✓ LangChain, LlamaIndex, RAG</li>
+                    <li class="flex items-center gap-2">✓ Hugging Face Transformers</li>
+                    <li class="flex items-center gap-2">✓ OpenAI API, Vector Databases</li>
+                </ul>
             </div>
-            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
-                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_03]</span>
-                <h3 class="font-gaming text-lg font-bold text-white mb-2">Data Analytics</h3>
-                <p class="text-xs text-gray-400">SQL, Tableau, PowerBI, Statistical Analysis, ETL pipelines.</p>
+
+            <!-- Category 3: Data Analytics & BI -->
+            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-72 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left card-hover-effect">
+                <span class="text-[10px] text-red-500 font-gaming block mb-1 uppercase tracking-widest">[DOMAIN_03]</span>
+                <h3 class="font-gaming text-md font-bold text-white mb-3">Data Analytics & BI</h3>
+                <ul class="space-y-1.5 text-xs text-gray-300 font-medium">
+                    <li class="flex items-center gap-2">✓ SQL, Advanced Querying</li>
+                    <li class="flex items-center gap-2">✓ Tableau, PowerBI Dashboards</li>
+                    <li class="flex items-center gap-2">✓ Statistical Analysis & ETL</li>
+                </ul>
             </div>
-            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
-                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_04]</span>
-                <h3 class="font-gaming text-lg font-bold text-white mb-2">DevOps & MLOps</h3>
-                <p class="text-xs text-gray-400">Docker, Git, Linux, CI/CD Workflows, Cloud Deployment (Streamlit).</p>
+
+            <!-- Category 4: DevOps & Tools -->
+            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-72 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left card-hover-effect">
+                <span class="text-[10px] text-red-500 font-gaming block mb-1 uppercase tracking-widest">[DOMAIN_04]</span>
+                <h3 class="font-gaming text-md font-bold text-white mb-3">DevOps & Deployment</h3>
+                <ul class="space-y-1.5 text-xs text-gray-300 font-medium">
+                    <li class="flex items-center gap-2">✓ Docker, Linux Environments</li>
+                    <li class="flex items-center gap-2">✓ Git, Version Control Workflows</li>
+                    <li class="flex items-center gap-2">✓ Streamlit Cloud Deployments</li>
+                </ul>
             </div>
+
         </div>
     </div>
 </section>
