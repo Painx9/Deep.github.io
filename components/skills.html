@@ -1,23 +1,35 @@
-<section id="skills" class="py-24 px-6 max-w-6xl mx-auto border-t border-zinc-900/40">
-    <h2 class="font-gaming text-3xl font-black mb-12 text-center tracking-widest text-white uppercase">
-        <span data-en="Technical" data-de="Technisches">Technical</span> <span class="text-red-500" data-en="Arsenal" data-de="Arsenal">Arsenal</span>
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-500/50 transition duration-300">
-            <h3 class="font-gaming text-sm font-bold uppercase tracking-widest text-red-500 mb-3" data-en="Core Languages" data-de="Kernsprachen">Core Languages</h3>
-            <p class="text-gray-300 text-md font-medium leading-relaxed">Python, SQL, HTML5, CSS3, JavaScript (ES6+), JSON</p>
-        </div>
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-500/50 transition duration-300">
-            <h3 class="font-gaming text-sm font-bold uppercase tracking-widest text-red-500 mb-3" data-en="Libraries & Frameworks" data-de="Bibliotheken & Frameworks">Libraries & Frameworks</h3>
-            <p class="text-gray-300 text-md font-medium leading-relaxed">Scikit-Learn, XGBoost, Pandas, NumPy, NLTK, Seaborn, Matplotlib, Pydantic, Google GenAI SDK, Groq API</p>
-        </div>
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-500/50 transition duration-300">
-            <h3 class="font-gaming text-sm font-bold uppercase tracking-widest text-red-500 mb-3" data-en="Tools & Systems" data-de="Werkzeuge & Systeme">Tools & Systems</h3>
-            <p class="text-gray-300 text-md font-medium leading-relaxed">Git, GitLab, GitHub REST API, Power BI (Data Modeling, Power Query, Basic DAX), Microsoft-Office, VS Code, Groq Cloud, Streamlit Cloud, Google Colab, Jupyter Notebooks, Gradio, LaTeX</p>
-        </div>
-        <div class="p-6 bg-zinc-950 border border-zinc-800 rounded-lg hover:border-red-500/50 transition duration-300">
-            <h3 class="font-gaming text-sm font-bold uppercase tracking-widest text-red-500 mb-3" data-en="Core Methodologies" data-de="Methoden">Core Methodologies</h3>
-            <p class="text-gray-300 text-sm font-medium leading-relaxed">Reasoning-and-Acting (ReAct) Agent Architecture, Multimodal Data Pipelines, Core Machine Learning Lifecycle, ETL Cleaning Loops, Feature Binarization, API Data Parsing</p>
+<section id="skills" class="reveal py-24 bg-black px-6 overflow-hidden">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="font-gaming text-3xl font-black tracking-widest text-white uppercase mb-4">
+            <span data-en="Technical" data-de="Technische">Technical</span> <span class="text-red-500" data-en="Arsenal" data-de="Fähigkeiten">Arsenal</span>
+        </h2>
+        <p class="text-gray-400 text-sm max-w-xl mx-auto mb-12">
+            Click any core engine module below to shift focus and inspect telemetry specs.
+        </p>
+
+        <!-- Side-by-Side Rotating Skills Carousel Track -->
+        <div class="skills-carousel-track" id="skills-track">
+            <!-- Dynamically populated or manually structured side-by-side nodes -->
+            <div onclick="focusSkill(this)" class="skill-node active-center flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
+                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_01]</span>
+                <h3 class="font-gaming text-lg font-bold text-white mb-2">Python & Core ML</h3>
+                <p class="text-xs text-gray-400">PyTorch, Scikit-Learn, Pandas, NumPy, Optimization algorithms.</p>
+            </div>
+            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
+                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_02]</span>
+                <h3 class="font-gaming text-lg font-bold text-white mb-2">LLM & GenAI</h3>
+                <p class="text-xs text-gray-400">LangChain, Hugging Face Transformers, RAG Architectures, OpenAI API.</p>
+            </div>
+            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
+                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_03]</span>
+                <h3 class="font-gaming text-lg font-bold text-white mb-2">Data Analytics</h3>
+                <p class="text-xs text-gray-400">SQL, Tableau, PowerBI, Statistical Analysis, ETL pipelines.</p>
+            </div>
+            <div onclick="focusSkill(this)" class="skill-node flex-shrink-0 w-64 bg-zinc-950 border border-zinc-800 p-6 rounded-lg text-left">
+                <span class="text-xs text-red-500 font-gaming block mb-1">[CORE_04]</span>
+                <h3 class="font-gaming text-lg font-bold text-white mb-2">DevOps & MLOps</h3>
+                <p class="text-xs text-gray-400">Docker, Git, Linux, CI/CD Workflows, Cloud Deployment (Streamlit).</p>
+            </div>
         </div>
     </div>
 </section>
