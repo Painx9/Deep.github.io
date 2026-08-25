@@ -47,3 +47,42 @@ textarea::-webkit-scrollbar-thumb:hover { background: var(--theme-primary); }
     box-shadow: 0 10px 30px var(--theme-bg-glow);
     border-color: var(--theme-primary);
 }
+/* 3D Profile Photo Tilt Container */
+.profile-tilt-container {
+    perspective: 1000px;
+}
+.profile-tilt-card {
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+}
+
+/* Interactive Side-by-Side Rotating Skills Track */
+.skills-carousel-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 2rem 1rem;
+    scrollbar-width: none; /* Hide scrollbar for clean UI */
+}
+.skills-carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.skill-node {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.85);
+    opacity: 0.5;
+    filter: grayscale(80%);
+    cursor: pointer;
+}
+.skill-node.active-center {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: grayscale(0%);
+    border-color: var(--theme-primary);
+    box-shadow: 0 0 25px var(--theme-bg-glow);
+    z-index: 10;
+}
