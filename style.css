@@ -60,11 +60,12 @@ textarea::-webkit-scrollbar-thumb:hover { background: var(--theme-primary); }
 .skills-carousel-track {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Ensures smooth left-to-right alignment */
     gap: 1.5rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 2rem 1rem;
+    padding: 2rem 4rem; /* Adds padding on left and right so cards aren't cut off */
+    scroll-snap-type: x mandatory;
     scrollbar-width: none; /* Hide scrollbar for clean UI */
 }
 .skills-carousel-track::-webkit-scrollbar {
@@ -72,14 +73,16 @@ textarea::-webkit-scrollbar-thumb:hover { background: var(--theme-primary); }
 }
 
 .skill-node {
+    scroll-snap-align: center;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: scale(0.85);
     opacity: 0.5;
     filter: grayscale(80%);
     cursor: pointer;
+    flex-shrink: 0;
 }
 .skill-node.active-center {
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: 1;
     filter: grayscale(0%);
     border-color: var(--theme-primary);
