@@ -218,3 +218,45 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+// 1. Profile Photo 3D Tilt & Cursor Rotation Engine
+document.addEventListener('mousemove', (e) => {
+    const card = document.getElementById('profile-card');
+    if (!card) return;
+    
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    
+    // Calculate rotation angles (max 15 degrees)
+    const rotateX = (-y / 10).toFixed(2);
+    const rotateY = (x / 10).toFixed(2);
+    
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+});
+
+document.addEventListener('mouseleave', () => {
+    const card = document.getElementById('profile-card');
+    if (card) {
+        card.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+    }
+});
+
+// 2. Side-by-Side Rotating Skills Carousel Engine
+function focusSkill(selectedNode) {
+    const track = document.getElementById('skills-track');
+    if (!track) return;
+
+    // Remove active-center from all nodes
+    const nodes = track.querySelectorAll('.skill-node');
+    nodes.forEach(node => node.classList.remove('active-center'));
+
+    // Add active-center to clicked node
+    selectedNode.classList.add('active-center');
+
+    // Smoothly scroll selected node into the absolute center of the track view
+    selectedNode.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'center',
+        block: 'nearest'
+    });
+}
